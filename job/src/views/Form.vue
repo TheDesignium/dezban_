@@ -104,6 +104,11 @@
             </v-card>
         </body>
         </main>
+        <v-btn
+        @click="login=!login"
+        >
+            登録
+        </v-btn>
     </v-app>
 </template>
 
