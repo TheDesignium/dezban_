@@ -12,7 +12,7 @@
                         <div class="text-c font-weight-light pl-3 pb-2 pt-1">⛄除雪クラウド</div>
                     
                             <h2 class="pl-3 pb-1" font-family="sans-seif">
-                                帳票のプレビュー高速化<v-chip class="">SP:89</v-chip>
+                                帳票のプレビュー高速化<v-chip class="ml-2">SP:89</v-chip>
                             </h2>
                     </v-card-subtitle>
                     <v-card-text>
@@ -28,8 +28,12 @@
                     outlined
                     max-width="max"
                 >
-                   手入力や目視確認で行われている除雪の記録やレポートの業務を効率化することで,降雪地帯
+                   <v-card-text
+                    class="black--text"
+                   >
+                       手入力や目視確認で行われている除雪の記録やレポートの業務を効率化することで,降雪地帯
                    の生活インフラ整備に従事する人たちの負担を軽減します。
+                   </v-card-text>
                 </v-card>
                  <br>
                 <div class="font-G pl-3">要件</div>
@@ -39,7 +43,11 @@
                     outlined
                     max-width="max"
                 >
-                  Vue.JSで実装されているコードをネイティブのJavascriptに置き換えてください。
+                    <v-card-text
+                        class="black--text"
+                    >
+                        Vue.JSで実装されているコードをネイティブのJavascriptに置き換えてください。
+                    </v-card-text>
                 </v-card>
                 <br>
                 <br>
@@ -52,6 +60,7 @@
         color="rgb(167, 48, 48)" 
         dark
         @click="dialog=true"
+        to="/submit"
         >この案件に応募</v-btn>
         <v-dialog
             v-model="dialog"
@@ -74,7 +83,7 @@
                     </v-col>
                 </v-row>
             </v-card-text>
-            <v-btn width="49%" class="pl-1">今はしない</v-btn>   <v-btn width="49%" class="pr-1" color="red" dark to="/submit">登録する</v-btn>
+            <v-btn width="49%" class="pl-1">今はしない</v-btn>   <v-btn width="49%" class="pr-1" color="red" dark>登録する</v-btn>
             </v-container>
         </v-card>
         </v-dialog>

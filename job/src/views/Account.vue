@@ -45,7 +45,50 @@
           filled
           color="gray"
           background-color="white"
+          @click="dialog=true"
         ></v-text-field>
+        <v-dialog
+          v-model="dialog"
+        >
+        <v-card>
+          <v-card-title>
+            <v-text-field
+          prepend-inner-icon="mdi-magnify"
+          class="mx-2"
+          placeholder="検索（スキルリスト）"
+          filled
+          color="gray"
+          background-color="white">
+            </v-text-field>
+          </v-card-title>
+          <v-card-text>
+            <v-container fluid>
+              <v-row>
+                <v-col cols="4">
+                  <v-checkbox color="red" label="JavaScript"></v-checkbox>                  
+                </v-col>
+                <v-col cols="4">
+                  <v-checkbox color="red" label="Vue.js"></v-checkbox>
+                </v-col>
+                <v-col cols="4">
+                  <v-checkbox color="red" label="React"></v-checkbox>
+                </v-col>              
+              </v-row>
+              <v-row>
+                <v-col cols="4">
+                  <v-checkbox color="red" label="Go言語"></v-checkbox>                  
+                </v-col>
+                <v-col cols="4">
+                  <v-checkbox color="red" label="Python"></v-checkbox>
+                </v-col>
+                <v-col cols="4">
+                  <v-checkbox color="red" label="TypeScript"></v-checkbox>
+                </v-col>              
+              </v-row>
+            </v-container>
+          </v-card-text>
+        </v-card>
+        </v-dialog>
         <v-card
           outlined
           max-width="max"
@@ -99,6 +142,7 @@
         </v-card>
         <br>
         </v-content> 
+  
  </main>
   </v-app>
 </template>
@@ -107,9 +151,12 @@
 export default {
 data:function(){
   return{
+    check: false,
+    dialog: false,
     name:'会津太郎',
     mail:'taro@u-aizu.ac.jp',
     labels: ['経験なし', '経験あり', 'LTできる', '教えられる'],
+    a:[1,2,3,4,5,6]  
   }
 }
 };

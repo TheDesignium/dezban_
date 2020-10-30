@@ -15,8 +15,6 @@ const routes = [
   },
   {
     path: '/submit',
-    // name: 'Submit',
-    // component: () => import(/* webpackChunkName: "about" */'../views/Submit.vue')
     component: Submit
   },
   {

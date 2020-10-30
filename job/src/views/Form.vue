@@ -2,7 +2,7 @@
     <v-app>
         <main class="form">
         <header class="block">
-            <div class="login" align="right">
+            <div class="py-2 px-2" align="right">
                 <v-btn v-if="login" icon color="grey" to="/account">
                     <v-icon
                         large
@@ -57,6 +57,7 @@
                     <v-card-title>
                         <v-icon>{{ icons.mdiMagnify }}</v-icon>検索（スキルリスト表示）
                     </v-card-title>
+                    <v-divider></v-divider>
                     <v-card-text>
                         <v-btn class="my-2 mx-2">#未経験可</v-btn><v-btn class="my-2 mx-2">#JavaScript</v-btn>
                         <v-btn class="my-2 mx-2">#Go言語</v-btn><v-btn class="my-2 mx-2">#Python</v-btn><v-btn class="my-2 mx-2">#Vue.JS</v-btn>
@@ -65,7 +66,7 @@
                 </v-card>
             </v-dialog>
         </header>
-        <body>
+        <body class="my-8">
             <v-card tile>
                 <v-list class="text-center" flat>
                     <v-list-item-group color="grey">
@@ -75,7 +76,7 @@
                             <v-list-item-subtitle v-text="item.tags"></v-list-item-subtitle>
                         </v-list-item-content>
                         <v-list-item-action>
-                            <v-list-item-action-text v-text="item.deadline"></v-list-item-action-text>
+                            <v-list-item-action-text v-text="item.deadline" class="black--text pr-2"></v-list-item-action-text>
                             <v-chip x-small>
                                 {{ item.sp }}
                             </v-chip>
@@ -84,14 +85,15 @@
                     </v-list-item-group>
                 </v-list>
                 <v-list class="text-center" flat>
-                    <v-list-item-group color="grey">
-                    <v-list-item v-for="(item, i) in taskitems" :key="i" :to="item.pass">
+                    <v-list-item-group>
+                        <v-divider></v-divider>
+                    <v-list-item v-for="(item, i) in taskitems" :key="i" :to="item.pass" class="my-3">
                         <v-list-item-content>
                             <v-list-item-title v-text="item.title + item.text"></v-list-item-title>
                             <v-list-item-subtitle v-text="item.tags"></v-list-item-subtitle>
                         </v-list-item-content>
                         <v-list-item-action>
-                            <v-list-item-action-text v-text="item.deadline"></v-list-item-action-text>
+                            <v-list-item-action-text v-text="item.deadline" class="black--text pr-1"></v-list-item-action-text>
                             <v-chip x-small>
                                 {{ item.sp }}
                             </v-chip>
@@ -140,14 +142,6 @@
 </script>
 
 <style scoped>
-    body{
-        margin-top: 20px;
-    }
-    .alwaystask{
-        margin-right: auto;
-        margin-left: auto;
-        margin-bottom: 10px;
-    }
     .block{
         background-color: white;
     }

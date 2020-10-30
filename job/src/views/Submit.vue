@@ -3,42 +3,47 @@
         <main class="back flex">
             <header>
                 <v-card
-                class="pa-0"
+                class=""
                 color="white"
                 outlined
                 max-width="max"
                 >
-                    <v-app-subtitle > 
-                        <v-btn
+                    <v-card-subtitle 
+                        class="pb-0"
+                    > 
+                        <div
+                            align="right"
+                        >
+                            <v-btn
                             icon
                             to="/details"
-                        >
-                            <v-icon color="grey" large class="pl-0">mdi-close</v-icon>
-                        </v-btn>
-                        <div class="text-c font-weight-light pl-3 pb-2 pt-1">⛄除雪クラウド</div>
-                    </v-app-subtitle>
-                    <v-app-title>
-                        <h3 class="pl-3 pb-1" font-family="sans-seif">
+                            >
+                                <v-icon color="grey" large>mdi-close</v-icon>
+                            </v-btn>
+                        </div>
+                        <div class="text-c font-weight-light">⛄除雪クラウド</div>
+                    </v-card-subtitle>
+                    <v-card-title>
+                        <h3 font-family="sans-seif">
                             帳票のプレビュー高速化<v-chip class="ml-2">SP:89</v-chip>
                         </h3>
-                    </v-app-title>
-                    <v-app-text>
-                        <div class="pl-3 pb-1">納期: 2020/10/24</div>
-                        <div class="hass pl-3 pb-3 pt-1">＃未経験可＃JavaScript#Vue.JS</div>
-                    </v-app-text>
+                    </v-card-title>
+                    <v-card-text>
+                        <div class="pb-1">納期: 2020/10/24</div>
+                        <div class="hass pt-1">＃未経験可＃JavaScript#Vue.JS</div>
+                    </v-card-text>
                 </v-card>
             </header>
             <body>
-                <h4 class="my-3">スキル経験</h4>
+                <h4 class="my-2 mx-2">スキル経験</h4>
                 <v-card
                 outlined
                 max-width="max"
                 >
                 <v-card-title>
-                <h4>JavaScript</h4>
+                    JavaScript
                 </v-card-title>
                 <v-slider
-                value="1"
                 :max="3"
                 :tick-labels="labels"
                 class="mx-4"
@@ -56,10 +61,9 @@
                 max-width="max"
                 >
                 <v-card-title>
-                    <h4>Vue.js</h4>
+                        Vue.js
                     </v-card-title>
                     <v-slider
-                    value="2"
                     :max="3"
                     :tick-labels="labels"
                     class="mx-4"
@@ -71,7 +75,7 @@
                     >
                     </v-slider>
                 </v-card>
-                <center><v-btn color="lightgrey" class="px-15 mt-2" to="/details">応募を確定</v-btn></center>
+                <center><v-btn color="grey" class="px-15 mt-2 white--text btnhover" to="/details">応募を確定</v-btn></center>
             </body> 
         </main>
     </v-app>
